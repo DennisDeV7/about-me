@@ -1,5 +1,7 @@
 'use strict';
 
+let correctAnswers = 0;
+
 let user = prompt('What is your name?');
 alert(`Welcome ${user}! Lets answer some questions to get to know me better.`);
 
@@ -10,13 +12,17 @@ if(answerOne === 'yes' || answerOne === 'y'){
   alert('Sorry I don\'t');
 } else if(answerOne === 'no' || answerOne === 'n'){
   alert('You are correct!');
+  correctAnswers += 1;
 }
+
+console.log(correctAnswers);
 
 let answerTwo = prompt('Am I from New York?');
 
 if(answerTwo === 'yes' || answerTwo === 'y'){
   // console.log('Yes you are correct!');
   alert('Yes you are correct!');
+  correctAnswers += 1;
 } else if(answerTwo === 'no' || answerTwo === 'n'){
   alert('Incorrect, I am from New York.');
 }
@@ -26,6 +32,7 @@ let answerThree = prompt('Did I go to college?');
 if(answerThree === 'yes' || answerThree === 'y'){
   // console.log('Yes I did!');
   alert('Yes I did!');
+  correctAnswers += 1;
 } else if(answerThree === 'no' || answerThree === 'n'){
   alert('I did go to college');
 }
@@ -35,6 +42,7 @@ let answerFour = prompt('Did I live in Alaska?');
 if(answerFour === 'yes' || answerFour === 'y'){
   // console.log('Yes I did!');
   alert('Yes i did!');
+  correctAnswers += 1;
 } else if(answerFour === 'no' || answerFour === 'n'){
   alert('I did live in Alaska!');
 }
@@ -44,8 +52,43 @@ let answerFive = prompt('Am I learning to be a software developer?');
 if(answerFive === 'yes' || answerFive === 'y'){
   // console.log('Yes I am!');
   alert('Yes I am!');
+  correctAnswers += 1;
 } else if(answerFive === 'no' || answerFive === 'n'){
   alert('I am learning to be a software dev');
 }
 
-alert(`${user}, thank you for visiting the site!`);
+for(let i = 0; i < 4; i++){
+  let answerSix = prompt('Guess the number i am thinking of 1-10');
+  if(answerSix === '5'){
+    alert('Correct');
+    correctAnswers += 1;
+    break;
+  } if(answerSix < 5){
+    alert('Higher');
+  } if(answerSix > 5){
+    alert('Lower');
+  } if(i === 3){
+    alert('The answer is 5');
+  }
+}
+
+let i = 0;
+let breeds = ['retriever', 'lab'];
+let possibleBreeds = ['retriever', 'lab', 'pit bull', 'poodle'];
+
+while(i < 6){
+  for(let x = 0; x < possibleBreeds.length; x++){
+    alert('Choices: '+ possibleBreeds[x]);
+  }
+  let answerSeven = prompt('Name the breed of one of my dogs');
+  i++;
+  if(breeds.includes(answerSeven)){
+    alert('Correct!');
+    correctAnswers += 1;
+    break;
+  } else {
+    alert('Incorrect');
+  }
+}
+
+alert(`${user}, thank you for visiting the site! You got ${correctAnswers} answers right!`);

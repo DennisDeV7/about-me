@@ -18,6 +18,35 @@ body > p {
   margin-bottom: 20px;
 }
 
+.top10 {
+  position: fixed;
+  bottom: 265px;
+  margin-left: 8%;
+}
+
+ol{
+  border: 1px solid black;
+  width: 50%;
+  position: fixed;
+  bottom: 90px;
+}
+
+.ed {
+  color: black;
+  position: absolute;
+  bottom: 50%;
+  left: 30%;
+}
+
+.ed h3 {
+  text-align: center;
+}
+
+ul{
+  display: inline-block;
+  border: 5px solid black;
+}
+
 footer {
   background-color: cadetblue;
   bottom: 0px;
