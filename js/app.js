@@ -90,5 +90,5 @@ while(i < 6){
     alert('Incorrect');
   }
 }
-
 alert(`${user}, thank you for visiting the site! You got ${correctAnswers} answers right!`);
+
