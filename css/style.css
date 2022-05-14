@@ -18,34 +18,59 @@ body > p {
   margin-bottom: 20px;
 }
 
-.top10 {
-  position: fixed;
-  bottom: 265px;
-  margin-left: 8%;
+.red {
+  position: absolute;
+  bottom: 250px;
+  margin-left: 2%;
+  color: red;
+}
+
+.red h3 {
+  text-align: centers;
 }
 
 ol{
   border: 1px solid black;
-  width: 50%;
-  position: fixed;
-  bottom: 90px;
+  width:auto;
+  counter-reset: my-awesome-counter;
 }
 
-.ed {
-  color: black;
+ol li{  
+  counter-increment: my-awesome-counter;
+}
+
+ol li::before{
+  content: counter(my-awesome-counter) ". ";
+}
+
+.white {
+  color:white;
   position: absolute;
-  bottom: 50%;
   left: 30%;
 }
 
-.ed h3 {
+.white h3 {
   text-align: center;
 }
 
-ul{
-  display: inline-block;
-  border: 5px solid black;
+.blue {
+  color: blue;
+  position: absolute;
+  bottom: 50%;
+  left: 60%;
 }
+
+.blue h3 {
+  text-align: center;
+}
+
+* ul{
+  border: 5px solid black;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+
 
 footer {
   background-color: cadetblue;

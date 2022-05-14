@@ -94,12 +94,9 @@ function q7(){
   let i = 0;
   let breeds = ['retriever', 'lab'];
   let possibleBreeds = ['retriever', 'lab', 'pit bull', 'poodle'];
-  
+
   while(i < 6){
-    for(let x = 0; x < possibleBreeds.length; x++){
-      alert('Choices: '+ possibleBreeds[x]);
-    }
-    let answerSeven = prompt('Name the breed of one of my dogs');
+    let answerSeven = prompt(`Correctly name the breed of one of my dogs, options: ${possibleBreeds}`);
     i++;
     if(breeds.includes(answerSeven)){
       alert('Correct!');
