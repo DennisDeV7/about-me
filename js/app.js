@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 //**********I commented out all of the javascript because I uploaded my personal pitch to this website instead of using iCloud. This way someone from class can still view it without all of the prompts.**********/
 
